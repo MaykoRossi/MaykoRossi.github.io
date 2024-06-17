@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: #b6b6b8 3px solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #23232e;
+    height: 10vh;
+}
+
+main {
+    background-image: url('imgs/mountain_landscape9_generated.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: 90vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    display: inline-block;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #b6b6b8;
+    height: 5vh;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.footing li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    display: inline-block;
+    font-weight: 300;
+}
+
+.footing a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Borda opaca de 5px */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 23%; /* Ajustado para caber quatro cards dentro do container */
+    padding: 10px;
+    text-decoration: none; /* Remover sublinhado dos links */
+    color: black; /* Garantir que o texto do link seja preto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para hover */
+    margin-bottom: 20px; /* Espaço inferior entre as linhas de cards */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0; /* Ajustado para levar em conta a borda */
+}
+
+.card p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Leve aumento do tamanho no hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%; /* Preenche a largura da tela */
+        position: absolute; /* Torna o menu dropdown */
+        top: 60px; /* Ajusta a posição para abaixo do header */
+        left: 0;
+        background-color: #f8f8f8;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao menu */
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        display: block;
+        border-bottom: 1px solid #ccc; /* Adiciona separador entre itens */
+    }
+
+    .nav-list li a {
+        padding: 15px 20px; /* Adiciona espaçamento */
+        display: block; /* Faz o link ocupar toda a largura */
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Ajuste a largura dos cards para dispositivos móveis */
+    }
+}
