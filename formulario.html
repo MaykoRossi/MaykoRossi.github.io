@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Mayko Rossi</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#">Mayko Rossi</a>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="formulario.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <style>
+            body {
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1, p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-family: sans-serif;
+}
+
+#survey-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit:hover {
+    background-color: #45a049;
+}
+</style>
+
+<h1 id="title">Formulário de Contato</h1>
+<p id="description">Por favor, preencha o formulário abaixo para solicitar algum serviço ou deixar um feedback. </p>
+<form id="survey-form" action="send_form_email.php" method="post">
+    <label id="name-label" for="name">Nome:</label>
+    <input id="name" type="text" placeholder="Digite seu nome" required>
+
+    <label id="email-label" for="email">E-mail:</label>
+    <input id="email" type="email" placeholder="Digite seu e-mail" required>
+
+    <label id="number-label" for="number">Idade:</label>
+    <input id="number" type="number" placeholder="Digite sua idade" min="18" max="99">
+
+    <label for="dropdown">Escolha uma opção:</label>
+    <select id="dropdown">
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+    </select>
+
+    <label>Escolha uma das opções:</label>
+    <input type="radio" name="options" value="opcao1"> WebSite
+    <input type="radio" name="options" value="opcao2"> Aplicação Web
+
+    <label>Selecione suas preferências:</label>
+    <input type="checkbox" name="preferences" value="preferencia1"> Preferência 1
+    <input type="checkbox" name="preferences" value="preferencia2"> Preferência 2
+
+    <label for="comments">Comentários adicionais:</label>
+    <textarea id="comments" placeholder="Digite seus comentários"></textarea>
+
+    <button id="submit" type="submit">Enviar</button>
+</form>
+
+    </main>
+    <script src="navbar.js"></script>
+    <footer>
+        <nav class="rodape">
+            <ul class="footing">
+                <li><a href="#">Todos os direitos reservados.</a></li>
+                <li><a href="#">Desenvolvido por Mayko Rossi</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
