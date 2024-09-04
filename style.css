@@ -139,6 +139,97 @@ a:hover {
     color: #bbbbc0;
 }
 
+
+/* ESTILO PÁGINA 'SOBRE' */
+.content-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Branco com leve transparência */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    max-width: 800px; /* Limita a largura da section */
+    width: 100%; /* Garante que a section ocupe toda a largura disponível */
+    flex-wrap: wrap; /* Permite que o conteúdo quebre em múltiplas linhas se necessário */
+    justify-content: center;
+}
+
+.content-box img {
+    max-width: 40%; /* Limita a largura da imagem */
+    border-radius: 8px;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    flex-shrink: 0; /* Evita que a imagem encolha em telas menores */
+    border: #23272A 2px solid;
+}
+
+.text-content {
+    max-width: 60%; /* Limita a largura do texto */
+    flex-grow: 1; /* Permite que o texto ocupe mais espaço disponível */
+}
+
+.text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #23272A; /* Cor do texto */
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #23272A; /* Cor do texto */
+}
+
+
+/* BANNER ROTATIVO */
+.banner-rotativo {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsividade Banner rotativo*/
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     /* Botão flutuante para abrir/fechar o menu */
@@ -201,5 +292,32 @@ a:hover {
 
     .card {
         width: 90%;
+    }
+}
+
+
+/* RESPONSIVIDADE PARTE 'SOBRE' */
+@media screen and (max-width: 768px) {
+    .content-box {
+        flex-direction: column; /* Coloca a imagem e o texto em colunas (uma em cima da outra) em telas menores */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .content-box img {
+        max-width: 80%; /* Aumenta a largura da imagem em dispositivos móveis */
+        margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+        margin-right: 0; /* Remove o espaço lateral em dispositivos móveis */
+    }
+
+    .text-content {
+        max-width: 100%; /* Permite que o texto ocupe toda a largura disponível */
+    }
+
+    .text-content h2 {
+        font-size: 1.5rem; /* Diminui o tamanho do título em dispositivos móveis */
+    }
+
+    .text-content p {
+        font-size: 1rem; /* Ajusta o tamanho do texto para dispositivos móveis */
     }
 }

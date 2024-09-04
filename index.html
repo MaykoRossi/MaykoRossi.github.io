@@ -23,31 +23,31 @@
             <!-- Lista de navegação -->
             <ul class="nav-list">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Projetos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="portifoliofront.html">Projetos</a></li>
                 <li><a href="formulario.html">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="section1">
-        <div class="card-container">
-            <a href="portifoliofront.html" class="card">
-                <img src="imgs/frontend-logo.png" alt="Projetos relacionados a Front End">
-                <p class="legendacard">Front End</p>
-                <hr>
-                <p><h4>Nesta seção irá encontrar alguns dos projetos pessoais e de estudo.</h4></p>
-            </a>
-            <a href="https://github.com/MaykoRossi/trilha-net-explorando-desafio" class="card">
-                <img src="imgs/backend-logo.png" alt="Projetos relacionados a Back End">
-                <p class="legendacard">Back End</p>
-                <hr>
-                <p></p><h4>Nesta seção irá encontrar alguns dos projetos pessoais e de estudo.</h4></p>
-            </a>
-        </div>
-    </section>
+        <section class="banner-rotativo">
+            <div class="slides-container">
+                <div class="slide" id="slide1">
+                    <img src="imgs/banner1.jpg" alt="Banner 1">
+                </div>
+                <div class="slide" id="slide2">
+                    <img src="imgs/banner2.jpg" alt="Banner 2">
+                </div>
+                <div class="slide" id="slide3">
+                    <img src="imgs/banner3.jpg" alt="Banner 3">
+                </div>
+            </div>
+            <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+            <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+        </section>
     </main>
+
     <footer>
         <nav class="rodape">
             <ul class="footing">
@@ -56,5 +56,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="banner.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Mayko Rossi</title>
-    <script src="mobile-navbar.js"></script>
 </head>
 <body>
     <header>
@@ -18,8 +17,8 @@
             </div>
             <ul class="nav-list">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="portifoliofront.html">Projetos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Projetos</a></li>
                 <li><a href="formulario.html">Contatos</a></li>
             </ul>
         </nav>
@@ -90,19 +89,11 @@ input[type="checkbox"] {
 #submit:hover {
     background-color: #45a049;
 }
-@media (max-width: 768) {
-    #survey-form {
-        max-width: 250px;
-        display: block;
-        padding: .8rem;
-    }
-    
-}
 </style>
 
 <h1 id="title">Formulário de Contato</h1>
 <p id="description">Por favor, preencha o formulário abaixo para solicitar algum serviço ou deixar um feedback. </p>
-<form id="survey-form" action="send_form_email.php" method="post" class="formulariocontato">
+<form id="survey-form" action="send_form_email.php" method="post">
     <label id="name-label" for="name">Nome:</label>
     <input id="name" type="text" placeholder="Digite seu nome" required>
 
@@ -133,7 +124,7 @@ input[type="checkbox"] {
 </form>
 
     </main>
-    
+    <script src="navbar.js"></script>
     <footer>
         <nav class="rodape">
             <ul class="footing">
