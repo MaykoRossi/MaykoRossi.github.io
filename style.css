@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,19 +13,13 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: #414146 url('imgs/backgroundroxo.png') center center no-repeat; /* Background estático */
+    /* background: #414146 url('imgs/backgroundroxo.png') center center no-repeat; Background estático */
+    background-color: #1a1a1a;
     background-size: cover;
+    font-family: "Inter", sans-serif;
+    
 }
 
-main {
-    flex: 1; /* Ocupa o espaço disponível entre o header e o footer */
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    overflow-y: auto; /* Permite rolagem vertical, caso necessário */
-}
 
 nav {
     display: flex;
@@ -76,161 +72,250 @@ a:hover {
     margin: 8px;
 }
 
-/* Card Container */
+/* CARD CONTAINER - SECTION1 */
+.section1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
 .card-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaço entre os cards */
-    justify-content: space-evenly;
-    margin: .7rem;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
 }
 
-/* Card Style */
 .card {
-    background-color: white;
-    border: 5px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(135deg, #2c2c2c, #3d3d3d);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 300px; /* Define a largura máxima dos cards */
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card img {
-    max-width: 100%;
-    border-radius: 5px 5px 0 0;
-}
-
-.card p {
-    color: black;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 10px 0 0 0;
-    font-family: sans-serif;
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
-.legendacard {
-    font-weight: 800;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 2px solid #444;
 }
 
-/* Footer Style */
-.footing {
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.card p {
+    margin: 0 0 10px;
+    color: #ccc;
+}
+
+.tech-tags {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #3d3d3d;
-    height: 5vh;
-    width: 100%;
-    opacity: 0.7;
-    position: relative;
-    bottom: 0;
-    color: #bbbbc0;
-}
-
-
-/* ESTILO PÁGINA 'SOBRE' */
-.content-box {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Branco com leve transparência */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
-    max-width: 800px; /* Limita a largura da section */
-    width: 100%; /* Garante que a section ocupe toda a largura disponível */
-    flex-wrap: wrap; /* Permite que o conteúdo quebre em múltiplas linhas se necessário */
-    justify-content: center;
-}
-
-.content-box img {
-    max-width: 40%; /* Limita a largura da imagem */
-    border-radius: 8px;
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
-    flex-shrink: 0; /* Evita que a imagem encolha em telas menores */
-    border: #23272A 2px solid;
-}
-
-.text-content {
-    max-width: 60%; /* Limita a largura do texto */
-    flex-grow: 1; /* Permite que o texto ocupe mais espaço disponível */
-}
-
-.text-content h2 {
-    font-size: 1.8rem;
+    gap: 10px;
     margin-bottom: 10px;
-    color: #23272A; /* Cor do texto */
 }
 
-.text-content p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #23272A; /* Cor do texto */
+.tech {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+
+
+/* Estilo para o rodapé FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 5px 0; /* Reduz o padding para um visual mais slim */
+    font-size: 0.8rem; /* Reduz um pouco o tamanho da fonte */
+    z-index: 1000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    white-space: nowrap;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    gap: 8px;
+    margin-right: 5rem;
+    font-size: 0.8rem;
+}
+
+.footer-left p {
+    margin: 0;
+    display: inline;
+}
+
+.footer-middle {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.footer-text {
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.social-logo {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
 
 
 /* BANNER ROTATIVO */
+
+/* Estilo geral da main */
+.main-content {
+    width: 100%; /* Garante que a main ocupe toda a largura da página */
+    padding: 0; /* Remove qualquer padding padrão */
+    margin: 0; /* Remove qualquer margin padrão */
+}
+
+/* Estilo geral da section banner-rotativo */
 .banner-rotativo {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.slides-container {
+    background-color: #1a1a1a; /* Fundo escuro para contraste */
+    color: white; /* Cor do texto */
+    height: 100vh; /* O banner ocupa toda a altura da tela */
+    width: 100vw; /* O banner ocupa toda a largura da tela */
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    position: fixed; /* A seção fica fixa na tela */
+    top: 0; /* Posiciona a seção no topo da tela */
+    left: 0; /* Posiciona a seção na esquerda da tela */
+    overflow: hidden; /* Oculta qualquer conteúdo que saia da tela */
+    z-index: -1; /* Coloca o banner atrás do conteúdo principal, se necessário */
 }
 
-.slide {
-    min-width: 100%;
+/* Estilo para o conteúdo do banner */
+.banner-content {
+    text-align: left; /* Alinha o texto à esquerda */
+    position: relative; /* Mantém o conteúdo dentro da seção */
+    z-index: 1; /* Garante que o conteúdo fique sobre os efeitos */
+    animation: slideUp 8s ease-in-out infinite; /* Animação de deslizar para cima */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 90%; /* Limita a largura do conteúdo */
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
+/* Estilo para o título */
+.banner-title {
+    font-size: 4rem; /* Tamanho grande para o título */
+    font-weight: bold;
+    font-size: 200px;
+    margin-bottom: 10px; /* Espaço entre título e subtítulo */
+    font-family: "Inter", sans-serif; /* Fonte moderna e fácil de ler */ /* Fonte estilosa */
+    color: white; /* Título na cor branca */
+    animation: fadeIn 3s ease-in-out; /* Animação de aparecimento */
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
+/* Estilo para o subtítulo */
+.banner-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    color: #bbb; /* Subtítulo na cor cinza claro */
+    animation: fadeIn 3s ease-in-out 1s; /* Animação de aparecimento com atraso */
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* Responsividade Banner rotativo*/
-@media (max-width: 768px) {
-    .prev, .next {
-        font-size: 14px;
-        padding: 8px;
+/* Efeito de rotação suave */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%); /* Começa de baixo */
+    }
+    50% {
+        transform: translateY(0); /* Chega na posição central */
+    }
+    100% {
+        transform: translateY(-100%); /* Sobe para fora da tela */
     }
 }
 
-/* Responsividade */
+/* Animação para fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     /* Botão flutuante para abrir/fechar o menu */
     .mobile-menu {
@@ -319,5 +404,229 @@ a:hover {
 
     .text-content p {
         font-size: 1rem; /* Ajusta o tamanho do texto para dispositivos móveis */
+    }
+}
+
+
+
+
+/* Estilizando a seção About para organizar em colunas */
+.about-section {
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* Necessário para os pseudo-elementos ::before e ::after */
+}
+
+/* Criando duas colunas */
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Estilizando a coluna esquerda */
+.text-left {
+    max-width: 50%;
+    text-align: justify;
+}
+
+/* Estilo para o título */
+.about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo para o subtítulo */
+.about-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #bbb;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilizando a coluna da direita */
+.text-right {
+    max-width: 45%;
+    text-align: justify;
+    font-family: "Inter", sans-serif; /* Fonte moderna e fácil de ler */
+    font-size: 1rem; /* Tamanho adequado para leitura confortável */
+    line-height: 1.6; /* Espaçamento entre linhas para melhorar a fluidez */
+    color: #ffffff; /* Mantém o contraste no fundo escuro */
+}
+
+.agradecimento {
+    font-family: "Inter", sans-serif; /* Fonte moderna e fácil de ler */
+    text-align: justify;
+    font-weight: 20;
+    color: #bbb;
+    font-size: 14px; /* Define o tamanho da fonte, ajuste conforme necessário */
+}
+
+/* Estilo para a lista de soft skills */
+.text-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-right li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+    font-family: "Inter", sans-serif; /* Fonte moderna e fácil de ler */
+    font-weight: 50;
+}
+
+/* Aplicando detalhes estilizados nos cantos (como na referência) */
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    border-left: 3px solid #FFD700; /* Cor dourada */
+    border-top: 3px solid #FFD700;
+}
+
+.about-section::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    border-right: 3px solid #FFD700;
+    border-bottom: 3px solid #FFD700;
+}
+
+
+/* BOTÕES DE INTERAÇÃO DOS TEXTOS SOFT SKILLS */
+
+.skill-btn {
+    background-color: #000000; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: .6rem;
+    padding: 5px 10px; /* Ajusta o espaçamento interno para deixar o botão mais compacto */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin: 5px 0; /* Espaçamento entre os botões */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    width: auto; /* Faz o botão ajustar sua largura ao conteúdo */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais forte */
+    text-transform: uppercase; /* Converte o texto para caixa alta */
+    transition: background-color 0.3s ease; /* Efeito suave de transição */
+    display: inline-block; /* Faz com que os botões fiquem em linha */
+}
+
+.skill-btn:hover {
+    background-color: #bbbbbb; /* Cor de fundo quando o botão é hover */
+}
+
+.skill-btn::after {
+    content: attr(data-text); /* Exibe o texto correspondente ao botão */
+    display: block;
+    font-size: 12px; /* Tamanho da fonte do texto adicional */
+    margin-top: 5px;
+    color: #666; /* Cor do texto adicional */
+    visibility: hidden; /* Começa invisível */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    text-align: center; /* Centraliza o texto do conteúdo adicional */
+}
+
+.skill-btn:hover::after {
+    visibility: visible;
+    opacity: 1; /* Torna o texto visível no hover */
+}
+
+/* Responsividade */
+
+/* Dispositivos com largura máxima de 1024px (tablets e telas menores) */
+@media (max-width: 1024px) {
+    .about-section {
+        padding: 40px; /* Reduz o padding para telas menores */
+    }
+
+    .text-container {
+        flex-direction: column; /* Organiza as colunas em uma única coluna */
+        align-items: center;
+    }
+
+    .text-left, .text-right {
+        max-width: 100%; /* Permite que as colunas ocupem toda a largura */
+        margin-bottom: 20px; /* Espaçamento entre as colunas */
+    }
+
+    .about-title {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+
+    .about-subtitle {
+        font-size: 1.3rem; /* Reduz o tamanho do subtítulo */
+    }
+
+    .text-right li {
+        font-size: 1rem; /* Ajusta o tamanho da fonte da lista */
+    }
+
+    .skill-btn {
+        font-size: 12px; /* Ajusta o tamanho dos botões */
+        padding: 4px 8px; /* Ajusta o padding para telas menores */
+    }
+}
+
+/* Dispositivos com largura máxima de 768px (smartphones) */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 20px; /* Diminui ainda mais o padding */
+    }
+
+    .about-title {
+        font-size: 2rem; /* Reduz ainda mais o título */
+    }
+
+    .about-subtitle {
+        font-size: 1.2rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .text-right, .text-left {
+        max-width: 100%; /* Permite que as colunas ocupem toda a largura */
+    }
+
+    .text-right li {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte da lista */
+    }
+
+    .skill-btn {
+        font-size: 11px; /* Ajusta o tamanho dos botões */
+        padding: 3px 6px; /* Ajusta o padding dos botões */
+    }
+}
+
+/* Dispositivos com largura máxima de 480px (modelos de smartphones mais antigos) */
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 1.5rem; /* Reduz ainda mais o título */
+    }
+
+    .about-subtitle {
+        font-size: 1rem; /* Reduz ainda mais o subtítulo */
+    }
+
+    .skill-btn {
+        font-size: 10px; /* Ajusta o tamanho dos botões */
+        padding: 3px 5px; /* Ajusta o padding dos botões */
     }
 }

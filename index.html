@@ -30,32 +30,47 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-content">
         <section class="banner-rotativo">
-            <div class="slides-container">
-                <div class="slide" id="slide1">
-                    <img src="imgs/banner1.jpg" alt="Banner 1">
-                </div>
-                <div class="slide" id="slide2">
-                    <img src="imgs/banner2.jpg" alt="Banner 2">
-                </div>
-                <div class="slide" id="slide3">
-                    <img src="imgs/banner3.jpg" alt="Banner 3">
-                </div>
+            <div class="banner-content">
+                <h1 class="banner-title">Seja Bem Vindo</h1>
+                <p class="banner-subtitle">Transformamos suas ideias em projetos reais!</p>
             </div>
-            <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-            <button class="next" onclick="mudarSlide(1)">&#10095;</button>
         </section>
     </main>
 
     <footer>
         <nav class="rodape">
-            <ul class="footing">
-                <li><a href="#">Todos os direitos reservados.</a></li>
-                <li><a href="#">Desenvolvido por Mayko Rossi</a></li>
-            </ul>
+            <div class="footer-container">
+                <!-- Coluna Esquerda -->
+                <div class="footer-left">
+                    <p>2025 - Todos os direitos reservados.</p>
+                    <p><strong>Desenvolvido por Mayko Rossi</strong></p>
+                    <p>Brasil - Rio de Janeiro</p>
+                </div>
+                
+                <!-- Coluna Central (espaço vazio) -->
+                <div class="footer-middle"></div>
+    
+                <!-- Coluna Direita (logos sociais) -->
+                <div class="footer-right">
+                    <p class="footer-text">Conheça mais dos meus trabalhos:</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/maykorossi/" target="_blank">
+                            <img src="imgs/linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                        </a>
+                        <a href="https://github.com/MaykoRossi" target="_blank">
+                            <img src="imgs/github-logo.png" alt="GitHub" class="social-logo">
+                        </a>
+                        <a href="https://www.behance.net/maykorossi" target="_blank">
+                            <img src="imgs/behance-logo.png" alt="Behance" class="social-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </footer>
-    <script src="banner.js"></script>
+
+<!-- <script src="banner.js"></script> -->
 </body>
 </html>
